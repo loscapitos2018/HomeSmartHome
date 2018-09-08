@@ -30,7 +30,7 @@ try:
         #print(m)
         
         arduino.write(m.encode())
-        time.sleep (1)
+        time.sleep (10)
         nx.close()
         
         nx = mysql.connector.connect(user='root', password='12345678',
