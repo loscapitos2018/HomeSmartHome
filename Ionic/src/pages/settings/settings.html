@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>settings</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card color="dark">
+
+    <ion-card-header>
+      Select App Theme:
+      <ion-row>
+        <em>(Default: Dark)</em>
+      </ion-row>
+    </ion-card-header>
+
+    <ion-card-content>
+      <button ion-button (click)="toggleAppTheme()">
+        Dark
+      </button>
+      <button ion-button (click)="appLightTheme()">
+        Light
+      </button>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
