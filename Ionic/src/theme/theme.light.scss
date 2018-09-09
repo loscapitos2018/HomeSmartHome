@@ -1,0 +1,30 @@
+.light-theme {
+  ion-navbar{
+    background: transparent;
+    ion-icon{
+      color: lightsteelblue;
+    }
+  }
+  ion-content {
+    background-color: rgb(234, 239, 245);
+  }
+  ion-card {
+    border-radius: 3px;
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+    background-color: lightsteelblue;
+    // &:hover {
+    //   box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+    //   -webkit-transform: translateY(-5px);
+    //   -moz-transform: translateY(-5px);
+    //   transform: translateY(-5px);
+    // }
+  }
+  .toolbar-title {
+    color: #fff;
+  }
+  .toolbar-background {
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+    background-color: hsla(0, 0%, 0%, 0.596);
+  }  
+}
+

@@ -1,0 +1,49 @@
+.ios,
+.md {
+  page-home {
+    .btn{
+      background-color: lightsteelblue;
+    }
+    .items{
+      font-size: 25px;
+      float: none;
+      vertical-align: middle;
+      position: relative;
+    .arrow{
+      float: right;
+      background-color: rgba(95, 153, 228, 0.589);          
+      box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      text-align: center;
+      padding: 4px;
+      line-height: 35px;
+      text-indent: 1px;
+      transition: all 0.5s;
+    &:hover{
+      background-color: aqua;    
+    }
+  }
+}
+    .scrolling-wrapper {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      .card {
+        display: inline-block;
+        box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+        border: 1px solid rgb(46, 32, 240);
+        margin-top: 0px;
+        margin-bottom: -10px;
+        margin-inline-start: -5px;
+        margin-inline-end: 10px;
+      }
+    }
+  }
+}
+
