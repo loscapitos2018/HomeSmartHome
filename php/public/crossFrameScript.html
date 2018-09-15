@@ -1,0 +1,14 @@
+
+<iframe
+  onkeypress="alert('errore!!!')"
+  style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"
+  
+  src="http://ivx-was85.ad.rgigroup.com/helvetia/ServletLogin?RGICommand=logout&RGIResponseOk=/helvetia/res2/login/Start.html"
+>
+
+</iframe>
+<script>
+  document.getElementsByTagName("iframe")[0].onload = function(){
+    setTimeout("alert('ciao')", 5000);
+  };
+</script>

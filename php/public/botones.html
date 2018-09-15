@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+        .btn{
+            width: 200px;
+            padding: 15px 32px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+            <h2>Firmata y Arduino</h1>
+            <p>Con este ejemplo vamos a controlar un LED RGB a través de una web. Cuando pulsemos uno de los botones el LED cambiara al color que indique el botón. También podemos controlar enceder o apagar el LED o que parpadee</p>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-md-offset-3">
+               <p> <button id="b_azul" type="button" class="btn btn-lg btn-primary">Azul</button>
+               <p> <button id="b_verde" type="button" class="btn btn-lg btn-success">Verde</button>
+               <p> <button id="b_rojo" type="button" class="btn btn-lg btn-danger">Rojo</button>
+            </div>
+            <div class="col-md-3">
+                <p> <button id="b_stop" type="button" class="btn btn-lg btn-default">Blink</button>
+                <p> <button id="b_off" type="button" class="btn btn-lg btn-default">Led OFF</button>
+                <p> <button id="b_on" type="button" class="btn btn-lg btn-default">Led ON</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="well">
+                <p> Ejemplo realizado por: <a href="mailto:acontreras@programarfacil.com">Alfonso Contreras</a>
+                <br> <a href="wwww.programarfacil.com">www.programarfacil.com</a>
+                <br> <a href="https://programarfacil.com/blog/controla-tu-arduino-con-una-web-con-firmata-y-javascript">Entrada original</a>
+            </div>
+        </div>
+    </div>
+   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+   <script src="app.js"></script>
+   <script>
+        var socket = io();
+         
+        function cambiaAzul(){
+            socket.emit('azul');
+        }
+        function cambiaVerde(){
+            socket.emit('verde');
+        }
+        function cambiaRojo(){
+            socket.emit('rojo');
+        }
+
+        function stopBlink(){
+            socket.emit('stop');
+        }
+        function offLed(){
+            socket.emit('off');
+        }
+        function onLed(){
+            socket.emit('on');
+        }
+
+
+        document.getElementById('b_azul').onclick = cambiaAzul;
+        document.getElementById('b_verde').onclick = cambiaVerde;
+        document.getElementById('b_rojo').onclick = cambiaRojo;
+        document.getElementById('b_stop').onclick = stopBlink;
+        document.getElementById('b_off').onclick = offLed;
+        document.getElementById('b_on').onclick = onLed;
+    </script>
+</body>
+</html>

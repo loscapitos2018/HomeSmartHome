@@ -1,0 +1,32 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body{
+  background-image: url("/img/domotica.jpg");
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+.jumbotron{
+  color: white;
+  background-color: #333;
+  opacity: 0.95;
+  filter: alpha(opacity=95); /* For IE8 and earlier */
+}
+
+.media-body{
+  color: #838383;
+}
+.media-body p{
+  font-size: 12px !important;
+  color: #b3b3b3;
+}
+
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  text-shadow: 0 -1px 0 #286090;
+  color: black;
+  background: yellow;
+}
