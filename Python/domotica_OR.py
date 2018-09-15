@@ -30,29 +30,13 @@ try:
         #print(m)
         
         arduino.write(m.encode())
-        time.sleep (1)
+        time.sleep (0)
         nx.close()
         
         nx = mysql.connector.connect(user='root', password='12345678',
                               host='127.0.0.1',
                               database='hsh')
         cursor = nx.cursor()
-        if m=="0":
-            q="UPDATE `luces` SET `id_cuarto`=1,`estado`=1 WHERE 1"
-            cursor.execute(q)
-            print("Azul")
-        elif m=="2":
-            q="UPDATE `luces` SET `id_cuarto`=1,`estado`=0 WHERE 1"
-            cursor.execute(q)
-            print("Verde")
-        else:    
-            q="UPDATE `luces` SET `id_cuarto`=1,`estado`=2 WHERE 1"
-            cursor.execute(q)
-            print("Rojo")
-
-            
-             
-
 
 
 

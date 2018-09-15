@@ -1,0 +1,9 @@
+
+CREATE TABLE `hsh`.`luces` ( `id_cuarto` INT(2) NOT NULL , `estado` CHAR(2) NOT NULL , PRIMARY KEY (`id_cuarto`)) ENGINE = InnoDB;
+
+CREATE TABLE `luz`.`LuzCtr` ( `id_cuarto` INT NOT NULL , `fech_hor` DATETIME NOT NULL , `estado` INT(2) NOT NULL , `usuario` VARCHAR(20) NOT NULL , PRIMARY KEY (`id_cuarto`)) ENGINE = InnoDB;
+
+CREATE TABLE `luz`.`TemInter` ( `id_tempint` INT(2) NOT NULL , `id_cuarto` INT(2) NOT NULL , `lectura` INT(2) NOT NULL , PRIMARY KEY (`id_cuarto`)) ENGINE = InnoDB;
+
+CREATE TABLE `luz`.`tempctr` ( `id_consumo` INT(2) NOT NULL , `id_cuarto` INT(2) NOT NULL , `lectura_h` INT(2) NOT NULL , `fecha_temp` DATETIME NOT NULL , PRIMARY KEY (`id_cuarto`)) ENGINE = InnoDB;
+
