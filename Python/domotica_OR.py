@@ -17,8 +17,8 @@ for device in locations:
 
 try:
     nx = mysql.connector.connect(user='root', password='12345678',
-                              host='127.0.0.1',
-                              database='hsh')
+                                 host='127.0.0.1',
+                                 database='hsh')
     print("Conectado a la DB")
     cursor = nx.cursor()
     while True:
@@ -33,10 +33,10 @@ try:
         time.sleep (0)
         nx.close()
         
-        nx = mysql.connector.connect(user='root', password='12345678',
-                              host='127.0.0.1',
-                              database='hsh')
-        cursor = nx.cursor()
+ #     nx = mysql.connector.connect(user='root', password='12345678',
+#                              host='127.0.0.1',
+ #                             database='hsh')
+ #       cursor = nx.cursor()
 
 
 
