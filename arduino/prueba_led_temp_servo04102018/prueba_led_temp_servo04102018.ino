@@ -30,6 +30,7 @@ void setup(){
   pinMode(13,OUTPUT);
   pinMode(12,OUTPUT);
   pinMode(11,OUTPUT);
+  pinMode(3,OUTPUT);  
   pinMode(9,INPUT);
   pinMode(7,INPUT);
   dht11.begin();//Iniciamos el sensor de temperatura
@@ -42,7 +43,14 @@ void loop(){
          Serial.println("Temperatura" + String(iTemperatura)+ "°" ); 
          Serial.println(vTemp);        
          vTemp = iTemperatura;
-        }
+      if (vTemp >= 24){
+          digitalWrite(3,HIGH);
+         }
+         else {
+          digitalWrite(3,LOW);
+         }
+         }
+        
       if (vHum != iHumedad){
          Serial.println("Humedad" + String(iHumedad)+ "%" );
          Serial.println(vHum);
